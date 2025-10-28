@@ -32,16 +32,70 @@ Entre sus principales funcionalidades se encuentran:
 ---
 
 ## Estructura del proyecto
-catedrarecetario/
-├── app/
-│ ├── java/sv/edu/catedra_recetario/ # Código fuente principal (Activities, Models, Adapters, Repository)
-│ ├── res/
-│ │ ├── layout/ # Archivos XML de diseño de interfaz
-│ │ ├── drawable/ # Iconos e imágenes del proyecto
-│ │ ├── menu/ # Configuración del BottomNavigation y menús
-│ │ └── values/ # Strings, colores y temas
-│ └── AndroidManifest.xml # Configuración general de la aplicación
-└── build.gradle # Configuración de Gradle
+📁 catedrarecetario/
+│
+├── 📁 .gradle/
+├── 📁 .idea/                        # Configuración interna de Android Studio
+│
+├── 📁 app/
+│   ├── 📁 build/                    # Archivos generados automáticamente (no modificar)
+│   │
+│   ├── 📁 libs/                     # Librerías externas opcionales (.jar)
+│   │
+│   ├── 📁 src/
+│   │   ├── 📁 main/
+│   │   │   ├── 📁 java/sv/edu/catedra_recetario/
+│   │   │   │   ├── 📄 MainActivity.kt             # Pantalla principal de la app
+│   │   │   │   ├── 📄 Receta.kt                  # Data class del modelo Receta
+│   │   │   │   ├── 📄 RecetaAdapter.kt           # Adaptador para RecyclerView
+│   │   │   │   ├── 📄 RecetaRepository.kt        # Clase que gestiona Firebase Firestore
+│   │   │   │   ├── 📄 FavoritosFragment.kt       # Fragmento para mostrar recetas favoritas
+│   │   │   │   ├── 📄 HomeFragment.kt            # Fragmento principal con la lista de recetas
+│   │   │   │   ├── 📄 PerfilFragment.kt          # Fragmento del perfil del usuario
+│   │   │   │   ├── 📄 LoginActivity.kt           # (Opcional) pantalla de login o autenticación
+│   │   │   │   └── 📄 utils/                     # Funciones auxiliares o helpers
+│   │   │   │
+│   │   │   ├── 📁 res/                           # Recursos de interfaz y diseño
+│   │   │   │   ├── 📁 drawable/                  # Imágenes, íconos y fondos personalizados
+│   │   │   │   │   ├── 📄 ic_favorite.xml
+│   │   │   │   │   ├── 📄 ic_favorite_border.xml
+│   │   │   │   │   ├── 📄 placeholder_image.xml
+│   │   │   │   │   └── 📄 error_image.xml
+│   │   │   │   │
+│   │   │   │   ├── 📁 layout/                    # Interfaces visuales (archivos XML)
+│   │   │   │   │   ├── 📄 activity_main.xml
+│   │   │   │   │   ├── 📄 fragment_home.xml
+│   │   │   │   │   ├── 📄 fragment_favoritos.xml
+│   │   │   │   │   ├── 📄 fragment_perfil.xml
+│   │   │   │   │   ├── 📄 item_receta.xml        # Tarjeta individual de una receta
+│   │   │   │   │   └── 📄 dialog_add_receta.xml  # Diálogo para agregar recetas
+│   │   │   │   │
+│   │   │   │   ├── 📁 menu/
+│   │   │   │   │   ├── 📄 bottom_nav_menu.xml    # Navegación inferior (Home, Favoritos, Perfil)
+│   │   │   │   │   └── 📄 menubutton_nav.xml     # Opciones de acción o menú contextual
+│   │   │   │   │
+│   │   │   │   ├── 📁 values/
+│   │   │   │   │   ├── 📄 colors.xml             # Paleta de colores del tema
+│   │   │   │   │   ├── 📄 strings.xml            # Textos y etiquetas de la app
+│   │   │   │   │   ├── 📄 styles.xml             # Estilos globales
+│   │   │   │   │   └── 📄 themes.xml             # Configuración de temas (Material Design)
+│   │   │   │   │
+│   │   │   │   ├── 📄 AndroidManifest.xml        # Configuración general de la app
+│   │   │   │
+│   │   │   └── 📁 test/ & 📁 androidTest/        # Pruebas unitarias e instrumentadas
+│   │   │
+│   │   ├── 📄 google-services.json               # Configuración de Firebase
+│   │
+│   ├── 📄 build.gradle                           # Configuración específica del módulo app
+│   └── 📄 proguard-rules.pro                     # Reglas para optimización y ofuscación
+│
+├── 📄 build.gradle                               # Configuración principal del proyecto
+├── 📄 settings.gradle                            # Configura los módulos del proyecto
+├── 📄 gradlew / gradlew.bat                      # Scripts para compilar desde terminal
+├── 📄 gradle.properties                          # Propiedades globales de Gradle
+├── 📄 local.properties                           # Ruta del SDK de Android
+└── 📄 README.md                                  # Documentación del proyecto (este archivo)
+
 
 ---
 
