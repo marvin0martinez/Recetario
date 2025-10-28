@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo principal -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FF825D"
+                android:endColor="#F89B7E"
+                android:angle="45" />
+        </shape>
+    </item>
+
+    <!-- Cuchara decorativa -->
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:gravity="center">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="100dp"
+            android:height="100dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24"
+            android:tint="#FFFFFF">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M3,3v2h2l0.38,9.25c-0.2,0.61 0.32,1.16 0.95,1.16c0.41,0 0.77,-0.25 0.92,-0.61L9.5,15h5l1.25,2.39c0.15,0.36 0.51,0.61 0.92,0.61c0.63,0 1.15,-0.56 0.95,-1.16L19,5h2V3H3z"/>
+        </vector>
+    </item>
+</layer-list>
